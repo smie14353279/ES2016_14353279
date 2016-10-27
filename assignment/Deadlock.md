@@ -26,7 +26,7 @@
 首先runnable是一个线程，每次执行它时将自动执行run里面的语句，但因为这个线程里面还有main函数，而main函数的优先级应该比run的优先级高，所以main就抢占run执行，执行里面的Deadlock程序。在上面的函数中，我们可以通过调节Deadlock程序里面的count值来使其优先级下降，以便其被run程序所抢占。<br />
 ![image](https://cloud.githubusercontent.com/assets/22726648/19731980/d2cf5f6c-9bd1-11e6-9859-27b6837a22e1.png)<br />
 
-**3.死锁产生的原因：**
+**4.死锁产生的原因：**
 只有在Deadlock程序和run程序优先级相等时，陷入轮转调度的时候才有可能产生死锁，即a.methodA(b)和b.methodB(a)的优先级相等，此时当执行a.methodA(b)还没执行里面的b.last()时，b.methodB(a)抢占执行。因为a.methodA(b)和b.methodB(a)都被synchronized所修饰，而且a.methodA(b)和b.methodB(a)已经同时执行，class A和class B的last函数都被阻塞，所以两个程序都陷入无限等待的过程中，死锁产生了。<br />
 
 所以产生死锁的可能是将count值调为当run程序在将要执行b.methodB(a)和Deadlock程序将要执行a.methodA(b)的情况下，它们两个的优先级相等，这样的话便于a.methodA(b)和b.methodB(a)互相轮转抢占，发生上面那种产生死锁的情况。<br />
