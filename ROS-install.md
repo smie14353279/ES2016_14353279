@@ -9,27 +9,34 @@ ROS（Robot Operating System） 是一个在计算机上对机器人进行操作
 ### 二、在Ubuntu上安装ROS###
 
 **1.**配置你的 Ubuntu 软件仓库(repositories) 以允许 "restricted"、"universe" 和 "multiverse"这三种安装模式。
+
 <center>![image](https://cloud.githubusercontent.com/assets/22726648/20171129/44b9ef86-a76a-11e6-95d1-5d5b982bff75.png)</center>
 <br />
 **2.**添加sources.list：配置你的电脑使其能够安装来自 packages.ros.org的软件包
+
 <center>![image](https://cloud.githubusercontent.com/assets/22726648/20171275/e0c46852-a76a-11e6-9cb7-f892deef43e1.png)</center>
 <br />
 **3.**添加keys
+
 <center>![image](https://cloud.githubusercontent.com/assets/22726648/20171336/1f2ca884-a76b-11e6-8e21-da5e3332ea9d.png)</center>
 <br />
 **4.**安装ros
+
 <center>![image](https://cloud.githubusercontent.com/assets/22726648/20171362/44b9a9bc-a76b-11e6-8b2c-ca27bf0291c0.png)
 
 ![image](https://cloud.githubusercontent.com/assets/22726648/20171366/48e87982-a76b-11e6-896d-887ac8bcf3ad.png)</center><br />
 **5.**初始化rosdep: rosdep可以方便在需要编译某些源码的时候为其安装一些系统依赖，同时也是某些ROS核心功能组件所必需用到的工具。
+
 <center>
 ![image](https://cloud.githubusercontent.com/assets/22726648/20171433/93cea26e-a76b-11e6-9483-d95ba1361bc6.png)
 
 ![image](https://cloud.githubusercontent.com/assets/22726648/20171435/95ca0766-a76b-11e6-90e5-1958f6c91571.png)</center>
 <br />
 **6.**环境配置: 每次打开一个新的终端时ROS环境变量都能够自动配置好。
+
 <center>![image](https://cloud.githubusercontent.com/assets/22726648/20171503/e9bf7bee-a76b-11e6-9d1b-cc48214ded86.png)</center><br />
 **7.**安装 rosinstall: rosinstall 是ROS中一个独立分开的常用命令行工具，它可以方便让你通过一条命令就可以给某个ROS软件包下载很多源码树。
+
 <center>
 ![image](https://cloud.githubusercontent.com/assets/22726648/20171548/197f08ea-a76c-11e6-80a6-80ec2e5b6e31.png)
 
